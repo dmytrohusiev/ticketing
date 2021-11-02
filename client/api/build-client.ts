@@ -7,7 +7,7 @@ export const buildClient = ({ req }: { req?: IncomingMessage }) => {
   }
 
   return axios.create({
-    baseURL: "http://ingress-nginx-controller.ingress-nginx.svc.cluster.local",
+    baseURL: "http://husiev-dmytro.xyz",
     headers: req.headers as Record<string, string>
   });
 };
