@@ -4,7 +4,6 @@ import { app } from "./app";
 import { config } from "./config";
 
 const start = async () => {
-  console.log("starting app...");
   try {
     await mongoose.connect(config.mongo_uri);
     console.log("Connected to mongoDB");
