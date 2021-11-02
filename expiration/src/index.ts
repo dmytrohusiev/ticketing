@@ -7,7 +7,7 @@ const start = async () => {
     await natsWrapper.connect(config.nats.cluster_id, config.nats.client_id, config.nats.uri);
 
     natsWrapper.client.on("close", () => {
-      console.log("NATS connection closed");
+      console.log("NATS connection closed.");
       process.exit();
     });
 

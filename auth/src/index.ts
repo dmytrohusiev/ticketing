@@ -6,7 +6,7 @@ import { config } from "./config";
 const start = async () => {
   try {
     await mongoose.connect(config.mongo_uri);
-    console.log("Connected to mongoDB");
+    console.log("Connected to mongoDB.");
   } catch (err) {
     console.error(err);
   }
