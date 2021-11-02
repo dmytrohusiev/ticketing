@@ -7,7 +7,6 @@ import { signinRouter } from "./routes/signin";
 import { signoutRouter } from "./routes/signout";
 import { signupRouter } from "./routes/signup";
 import { errorHandler, NotFoundError } from "@povertay/common";
-import { config } from "./config";
 
 const app = express();
 app.set("trust proxy", true);
@@ -15,7 +14,7 @@ app.use(json());
 app.use(
   cookieSession({
     signed: false,
-    secure: !config.is_test
+    secure: false
   })
 );
 
