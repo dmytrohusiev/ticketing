@@ -7,7 +7,7 @@ export const buildClient = ({ req }: { req?: IncomingMessage }) => {
   }
 
   return axios.create({
-    baseURL: "http://husiev-dmytro.xyz",
+    baseURL: "http://www.husiev-dmytro.xyz",
     headers: req.headers as Record<string, string>
   });
 };
