@@ -1,0 +1,11 @@
+server/generated/graphql.ts
+frontend/generated/graphql.tsx
+dist
+dist-connect
+dist-sdk
+dist-server
+.github
+node_modules
+public
+tmp
+*.xml
