@@ -2,11 +2,12 @@ import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
 import request from "supertest";
 import { app } from "../app";
+import { config } from "../config";
 
 let mongo: MongoMemoryServer;
 
 beforeAll(async () => {
-  process.env.JWT_KEY = "asdf";
+  process.env.JWT_KEY = config.jwt_secret;
   mongo = await MongoMemoryServer.create();
   const mongoUri = mongo.getUri();
 
