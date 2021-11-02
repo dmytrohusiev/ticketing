@@ -22,7 +22,7 @@ const start = async () => {
     new OrderCancelledListener(natsWrapper.client).listen();
 
     await mongoose.connect(config.mongo_uri);
-    console.log("Connected to mongoDB");
+    console.log("Connected to mongoDB.");
   } catch (err) {
     console.error(err);
   }
