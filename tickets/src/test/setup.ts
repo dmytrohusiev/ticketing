@@ -34,7 +34,6 @@ afterAll(async () => {
 
 global.signin = (id = "1") => {
   const session = JSON.stringify({ jwt: jwt.sign({ id, email: "test@test.com" }, config.jwt_secret) });
-
   const base64 = Buffer.from(session).toString("base64");
   return [`express:sess=${base64}`];
 };

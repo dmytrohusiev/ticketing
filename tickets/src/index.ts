@@ -11,6 +11,7 @@ const start = async () => {
     await natsWrapper.connect(config.nats.cluster_id, config.nats.client_id, config.nats.uri);
 
     new OrderCreatedListener(natsWrapper.client).listen();
+
     new OrderCancelledListener(natsWrapper.client).listen();
 
     natsWrapper.client.on("close", () => {
