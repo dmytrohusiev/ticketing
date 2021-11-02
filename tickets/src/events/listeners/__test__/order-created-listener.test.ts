@@ -1,8 +1,7 @@
 import { OrderCreatedListener } from "../order-created-listener";
 import { natsWrapper } from "../../../nats-wrapper";
 import { Ticket, TicketDoc } from "../../../models/ticket.model";
-import { OrderCreatedEvent } from "@povertay/common";
-import { OrderStatus } from "../../../../../common/src";
+import { OrderCreatedEvent, OrderStatus } from "@povertay/common";
 import mongoose from "mongoose";
 import { Message } from "node-nats-streaming";
 
